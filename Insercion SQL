@@ -1,0 +1,15 @@
+-- Confederaciones
+INSERT INTO Confederacion (nombre, siglas) VALUES
+('Confederación Sudamericana de Fútbol', 'CONMEBOL'),
+('Unión Europea de Asociaciones de Fútbol', 'UEFA'),
+('Confederación de Fútbol de Norteamérica, Centroamérica y el Caribe', 'CONCACAF'),
+('Confederación Africana de Fútbol', 'CAF'),
+('Confederación Asiática de Fútbol', 'AFC');
+
+-- Equipos (ejemplo parcial)
+INSERT INTO Equipo (abreviatura, nombre, id_confederacion) VALUES
+('arg', 'Argentina', 1),
+('aus', 'Australia', 2),
+('bel', 'Bélgica', 2),
+('bra', 'Brasil', 1),
+('col', 'Colombia', 1);
