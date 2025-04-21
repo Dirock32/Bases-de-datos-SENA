@@ -1,34 +1,37 @@
-// Confederaciones
 db.confederaciones.insertMany([
-    {
-        _id: 1,
-        nombre: "CONMEBOL",
-        descripcion: "Confederación Sudamericana de Fútbol"
-    },
-    {
-        _id: 2,
-        nombre: "UEFA",
-        descripcion: "Unión Europea de Asociaciones de Fútbol"
-    }
-]);
-
-// Equipos con jugadores
-db.equipos.insert({
-    abreviatura: "arg",
-    nombre: "Argentina",
-    confederacion: ObjectId("...CONMEBOL..."),
-    jugadores: [
-        { nombre: "Lionel Messi", posicion: "Delantero" },
-        { nombre: "Sergio Agüero", posicion: "Delantero" }
-    ]
-});
-
-// Partidos
-db.partidos.insert({
-    fecha: ISODate("2018-06-16T13:00:00Z"),
-    estadio: "Estadio Spartak",
-    local: ObjectId("...Argentina..."),
-    visitante: ObjectId("...Islandia..."),
-    resultado: "1-1",
-    fase: "Grupos"
-});
+  {
+    _id: "CONMEBOL",
+    nombre: "Confederación Sudamericana de Fútbol",
+    fundacion: 1916,
+    sede: "Paraguay",
+    presidente: "Alejandro Domínguez"
+  },
+  {
+    _id: "UEFA",
+    nombre: "Unión Europea de Asociaciones de Fútbol",
+    fundacion: 1954,
+    sede: "Suiza",
+    presidente: "Aleksander Čeferin"
+  },
+  {
+    _id: "CONCACAF",
+    nombre: "Confederación de Fútbol de Norte, Centroamérica y el Caribe",
+    fundacion: 1961,
+    sede: "Estados Unidos",
+    presidente: "Victor Montagliani"
+  },
+  {
+    _id: "CAF",
+    nombre: "Confederación Africana de Fútbol",
+    fundacion: 1957,
+    sede: "Egipto",
+    presidente: "Patrice Motsepe"
+  },
+  {
+    _id: "AFC",
+    nombre: "Confederación Asiática de Fútbol",
+    fundacion: 1954,
+    sede: "Malasia",
+    presidente: "Salman bin Ibrahim Al Khalifa"
+  }
+])
