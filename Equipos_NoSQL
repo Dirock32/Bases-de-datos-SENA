@@ -65,5 +65,5 @@ db.equipos.insertMany([
       goles_contra: 3
     }
   }
-  // Más equipos...
+
 ])
