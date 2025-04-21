@@ -1,0 +1,71 @@
+db.partidos.insertMany([
+  {
+    _id: 1,
+    fecha: new Date("2018-06-16T13:00:00Z"),
+    estadio: "Estadio Spartak",
+    ciudad: "Moscú",
+    fase: "Grupos",
+    grupo: "D",
+    equipo_local: {
+      id: "ARG",
+      nombre: "Argentina",
+      goles: 1,
+      alineacion: [1, 2, 3, 4, 5], // IDs de jugadores
+      cambios: [
+        { jugador_entra: 6, jugador_sale: 5, minuto: 65 }
+      ]
+    },
+    equipo_visitante: {
+      id: "ISL",
+      nombre: "Islandia",
+      goles: 1,
+      alineacion: [101, 102, 103, 104, 105],
+      cambios: [
+        { jugador_entra: 106, jugador_sale: 105, minuto: 70 }
+      ]
+    },
+    estadisticas: {
+      posesion: { local: 58, visitante: 42 },
+      tiros: { local: 12, visitante: 8 },
+      tiros_arco: { local: 4, visitante: 3 },
+      faltas: { local: 10, visitante: 15 }
+    },
+    arbitro: "Szymon Marciniak",
+    asistencia: 44290
+  },
+  {
+    _id: 2,
+    fecha: new Date("2018-06-22T12:00:00Z"),
+    estadio: "Estadio de San Petersburgo",
+    ciudad: "San Petersburgo",
+    fase: "Grupos",
+    grupo: "E",
+    equipo_local: {
+      id: "BRA",
+      nombre: "Brazil",
+      goles: 2,
+      alineacion: [3, 7, 8, 9, 10],
+      cambios: [
+        { jugador_entra: 11, jugador_sale: 10, minuto: 70 }
+      ]
+    },
+    equipo_visitante: {
+      id: "CRC",
+      nombre: "Costa Rica",
+      goles: 0,
+      alineacion: [201, 202, 203, 204, 205],
+      cambios: [
+        { jugador_entra: 206, jugador_sale: 205, minuto: 75 }
+      ]
+    },
+    estadisticas: {
+      posesion: { local: 65, visitante: 35 },
+      tiros: { local: 18, visitante: 5 },
+      tiros_arco: { local: 7, visitante: 1 },
+      faltas: { local: 8, visitante: 12 }
+    },
+    arbitro: "Björn Kuipers",
+    asistencia: 64268
+  }
+  // Más partidos...
+])
