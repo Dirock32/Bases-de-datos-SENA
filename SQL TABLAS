@@ -1,0 +1,52 @@
+-- Creación de la base de datos
+CREATE DATABASE mundial_fifa_2018;
+USE mundial_fifa_2018;
+
+-- Tabla Confederacion
+CREATE TABLE Confederacion (
+    id_confederacion INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL,
+    abreviatura VARCHAR(10) NOT NULL
+);
+
+-- Tabla Equipo
+CREATE TABLE Equipo (
+    id_equipo INT AUTO_INCREMENT PRIMARY KEY,
+    abreviatura VARCHAR(3) NOT NULL,
+    nombre VARCHAR(50) NOT NULL,
+    id_confederacion INT NOT NULL,
+    FOREIGN KEY (id_confederacion) REFERENCES Confederacion(id_confederacion)
+);
+
+-- Tabla Club
+CREATE TABLE Club (
+    id_club INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    pais VARCHAR(50) NOT NULL
+);
+
+-- Tabla Jugador
+CREATE TABLE Jugador (
+    id_jugador INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    fecha_nacimiento DATE,
+    posicion VARCHAR(30),
+    id_equipo INT NOT NULL,
+    id_club INT,
+    FOREIGN KEY (id_equipo) REFERENCES Equipo(id_equipo),
+    FOREIGN KEY (id_club) REFERENCES Club(id_club)
+);
+
+-- Tabla Partido
+CREATE TABLE Partido (
+    id_partido INT AUTO_INCREMENT PRIMARY KEY,
+    fecha DATETIME NOT NULL,
+    estadio VARCHAR(100) NOT NULL,
+    ciudad VARCHAR(50) NOT NULL,
+    id_equipo_local INT NOT NULL,
+    id_equipo_visitante INT NOT NULL,
+    goles_local INT,
+    goles_visitante INT,
+    FOREIGN KEY (id_equipo_local) REFERENCES Equipo(id_equipo),
+    FOREIGN KEY (id_equipo_visitante) REFERENCES Equipo(id_equipo)
+);
