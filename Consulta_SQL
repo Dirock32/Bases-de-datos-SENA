@@ -1,0 +1,8 @@
+SELECT e.nombre AS equipo, c.nombre AS confederacion
+FROM Equipo e
+JOIN Confederacion c ON e.id_confederacion = c.id_confederacion;
+
+SELECT c.nombre AS confederacion, COUNT(e.id_equipo) AS total_equipos
+FROM Confederacion c
+LEFT JOIN Equipo e ON c.id_confederacion = e.id_confederacion
+GROUP BY c.nombre;
