@@ -1,0 +1,21 @@
+db.estadios.insertMany([
+  {
+    _id: 1,
+    nombre: "Estadio Luzhniki",
+    ciudad: "Moscú",
+    capacidad: 81000,
+    partidos_jugados: 7,
+    inauguracion: 1956,
+    foto_url: "https://ejemplo.com/luzhniki.jpg"
+  },
+  {
+    _id: 2,
+    nombre: "Estadio de San Petersburgo",
+    ciudad: "San Petersburgo",
+    capacidad: 64268,
+    partidos_jugados: 6,
+    inauguracion: 2017,
+    foto_url: "https://ejemplo.com/sanpetersburgo.jpg"
+  }
+  // Más estadios...
+])
