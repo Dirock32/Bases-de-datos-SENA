@@ -1,0 +1,34 @@
+// Confederaciones
+db.confederaciones.insertMany([
+    {
+        _id: 1,
+        nombre: "CONMEBOL",
+        descripcion: "Confederación Sudamericana de Fútbol"
+    },
+    {
+        _id: 2,
+        nombre: "UEFA",
+        descripcion: "Unión Europea de Asociaciones de Fútbol"
+    }
+]);
+
+// Equipos con jugadores
+db.equipos.insert({
+    abreviatura: "arg",
+    nombre: "Argentina",
+    confederacion: ObjectId("...CONMEBOL..."),
+    jugadores: [
+        { nombre: "Lionel Messi", posicion: "Delantero" },
+        { nombre: "Sergio Agüero", posicion: "Delantero" }
+    ]
+});
+
+// Partidos
+db.partidos.insert({
+    fecha: ISODate("2018-06-16T13:00:00Z"),
+    estadio: "Estadio Spartak",
+    local: ObjectId("...Argentina..."),
+    visitante: ObjectId("...Islandia..."),
+    resultado: "1-1",
+    fase: "Grupos"
+});
