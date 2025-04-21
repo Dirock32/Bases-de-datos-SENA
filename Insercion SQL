@@ -1,15 +1,41 @@
--- Confederaciones
-INSERT INTO Confederacion (nombre, siglas) VALUES
-('Confederación Sudamericana de Fútbol', 'CONMEBOL'),
-('Unión Europea de Asociaciones de Fútbol', 'UEFA'),
-('Confederación de Fútbol de Norteamérica, Centroamérica y el Caribe', 'CONCACAF'),
-('Confederación Africana de Fútbol', 'CAF'),
-('Confederación Asiática de Fútbol', 'AFC');
+INSERT INTO Confederacion (id_confederacion, nombre, abreviatura) VALUES 
+(1, 'Confederación Sudamericana de Fútbol', 'CONMEBOL'),
+(2, 'Unión Europea de Asociaciones de Fútbol', 'UEFA'),
+(3, 'Confederación de Fútbol de Norte, Centroamérica y el Caribe', 'CONCACAF'),
+(4, 'Confederación Africana de Fútbol', 'CAF'),
+(5, 'Confederación Asiática de Fútbol', 'AFC');
 
--- Equipos (ejemplo parcial)
-INSERT INTO Equipo (abreviatura, nombre, id_confederacion) VALUES
+-- Luego insertar equipos haciendo referencia a IDs de confederación existentes
+INSERT INTO Equipo (abreviatura, nombre, id_confederacion) VALUES 
 ('arg', 'Argentina', 1),
 ('aus', 'Australia', 2),
-('bel', 'Bélgica', 2),
-('bra', 'Brasil', 1),
-('col', 'Colombia', 1);
+('bel', 'Belgium', 2),
+('bra', 'Brazil', 1),
+('col', 'Colombia', 1),
+('crc', 'Costa Rica', 3),
+('cro', 'Croatia', 2),
+('den', 'Denmark', 2),
+('egy', 'Egypt', 4),
+('eng', 'England', 2),
+('fra', 'France', 2),
+('ger', 'Germany', 2),
+('isl', 'Iceland', 2),
+('irn', 'IR Iran', 5),
+('jpn', 'Japan', 5),
+('kor', 'Korea Republic', 5),
+('mex', 'México', 3),
+('mar', 'Morocco', 4),
+('nga', 'Nigeria', 4),
+('pan', 'Panamá', 3),
+('per', 'Perú', 1),
+('pol', 'Poland', 2),
+('por', 'Portugal', 2),
+('rus', 'Russia', 2),
+('ksa', 'Saudi Arabia', 5),
+('sen', 'Senegal', 4),
+('srb', 'Serbia', 2),
+('esp', 'Spain', 2),
+('sui', 'Sweden', 2),
+('swe', 'Switzerland', 2),
+('tun', 'Tunisia', 4),
+('uru', 'Uruguay', 1);
