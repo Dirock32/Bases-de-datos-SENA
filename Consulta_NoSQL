@@ -1,0 +1,5 @@
+db.equipos.aggregate([
+  { $unwind: "$jugadores" },
+  { $match: { "jugadores.posicion": "Delantero" } },
+  { $project: { _id: 0, equipo: "$nombre", jugador: "$jugadores.nombre", dorsal: "$jugadores.dorsal" } }
+])
